@@ -1,0 +1,20 @@
+FORECAST for {{city}}
+
+<br/>
+
+<div ng-repeat="w in weatherResult.list"> <!-- just using some part of the JSON object !-->
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title"> <b> DAY: </b> {{ convertToDate(w.dt) | date : 'MMM d, y' }}</h3>
+				</div>
+				<div class="panel-body">
+					<b>Daytime temperature:</b> {{ convertToCelsius(w.temp.day) }} °C <br/>
+					<b>Description:</b> <span style="color:blue;"><b>{{ w.weather[0].description }} </b></span>
+				</div>
+			</div>
+		</div>		
+	</div>
+</div>
