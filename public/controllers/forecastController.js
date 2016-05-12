@@ -10,7 +10,7 @@ weatherApp.controller("forecastController", ["$scope", "$resource", "$routeParam
     scope.days = routeParams.days || 2; //default value for when there's no param on ur (normal /forecast)
 
     scope.weatherAPI = 
-    resource("http://api.openweathermap.org/data/2.5/forecast/daily?APPID=000983ad3a23d1c6c860d91c81abf4b2", 
+    resource("https://api.openweathermap.org/data/2.5/forecast/daily?APPID=000983ad3a23d1c6c860d91c81abf4b2", 
     	{ callback: "JSON_CALLBACK"},
     	{get: { method: "JSONP"}});
 
