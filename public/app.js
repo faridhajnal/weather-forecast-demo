@@ -4,43 +4,11 @@ var weatherApp = angular.module('weatherApp',['ngRoute', 'ngResource']); //note 
 
 //ROUTES
 
-weatherApp.config(function($routeProvider){
-    
-    $routeProvider
-
-    .when('/', {
-
-        templateUrl: 'pages/home.html',
-        controller: 'mainController'
-
-    })
-
-    .when('/forecast', {
-
-        templateUrl: 'pages/forecast.html',
-        controller: 'forecastController'
-
-    })
-
-    .when('/forecast/:days',{
-
-        templateUrl: 'pages/forecast.html',
-        controller: 'forecastController'
-        
-    })
-    
-    
-});
 
 
 //SERVICES ((CUSTOM))
 
-weatherApp.service('cityService', function(){
-    
-    this.city = "Mexico City, MX"; //default value.
-    
-    
-})
+
 
 //CONTROLLERS ON SEPARATE FILES
 
