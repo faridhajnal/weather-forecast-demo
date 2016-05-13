@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title"> <b> DAY: </b> {{ convertToDate({dt : weatherDay.dt}) | date : dateFormat }}</h3>
+	</div>
+	<div class="panel-body">
+		<b>Daytime temperature:</b> {{ convertToStandard({ daytimeTemp: 
+		weatherDay.temp.day}) }} °C <br/>
+		<b>Description:</b> <span style="color:blue;"><b>{{ weatherDay.weather[0].description }} </b></span>
+	</div>
+</div>

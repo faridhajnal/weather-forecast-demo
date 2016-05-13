@@ -4,8 +4,8 @@
    <div class="col-md-6 col-md-offset-3"> <!-- bootstrap to center content !-->
        <h4>Forecast by city</h4>
        <div class="form-group">
-           <input type="text" ng-model="city" class="form-control"/>
+           <input type="text" ng-model="city" class="form-control" placeholder="Enter your city name(3 chars min)" />
        </div>
-       <a href="#/forecast" class="btn btn-primary">Get Forecast</a> <!-- making a element look like button !-->
+       <a href="#/forecast" class="btn btn-primary" ng-disabled="city.length < 3">Get Forecast</a> <!-- making a element look like button !-->
    </div>
 </div> 
