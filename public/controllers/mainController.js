@@ -1,8 +1,8 @@
 var weatherApp = angular.module("weatherApp");
 
 
-weatherApp.controller("mainController", ["$scope", "cityService", 
-function(scope,cityService){
+weatherApp.controller("mainController", ["$scope", "$location", "cityService", 
+function(scope,location,cityService){
     
     var inputbox = document.getElementById('text input');
     scope.city = cityService.city;
@@ -18,6 +18,13 @@ function(scope,cityService){
     	scope.city = "";
     	document.getElementById('city-input').focus();
     	//console.log('Click on reset button ');
+
+    }
+
+    scope.submit = function(){
+
+    	location.path("/forecast"); //link behavior
+
 
     }
     
